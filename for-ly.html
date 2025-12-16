@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ly, I Need to Talk to U</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f4f1ee, #eae4df);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 600px;
+      width: 90%;
+      padding: 36px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #2b2b2b;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .heart {
+      text-align: center;
+      font-size: 38px;
+      margin: 20px 0;
+      animation: pulse 2s infinite;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background: #e07a5f;
+      color: #fff;
+      padding: 14px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 30px auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 1.5s ease;
+    }
+
+    .hidden.show {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 20px;
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
+      color: #777;
+      text-align: right;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Ly, please… I need to talk to u</h1>
+
+    <p>
+      I’ve been carrying a lot in my heart, Ly.  
+      I don’t want silence to explain things for me anymore.
+    </p>
+
+    <div class="heart">❤️</div>
+
+    <p>
+      I’m deeply sorry for the pain I caused—intentionally or not.  
+      U didn’t deserve it, and I take full responsibility.
+    </p>
+
+    <div class="btn" onclick="revealMessage()">
+      I need to talk to u, please
+    </div>
+
+    <div id="message" class="hidden">
+      <p>
+        I need to talk to u, please, Ly.  
+        Not to argue. Not to defend myself.
+      </p>
+
+      <p>
+        I need to talk so I can listen,  
+        understand how u feel,  
+        and say the things I should have said sooner.
+      </p>
+
+      <p>
+        If now isn’t the right time, I’ll wait.  
+        But when u’re ready, I’ll be here—fully and honestly.
+      </p>
+    </div>
+
+    <div class="signature">
+      — hikam
+    </div>
+  </div>
+
+  <script>
+    function revealMessage() {
+      document.getElementById("message").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
